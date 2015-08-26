@@ -1,0 +1,450 @@
+@import url('http://fonts.googleapis.com/css?family=Kameron:400,700');
+@padding:15px;
+/********************
+/ TEMPLATE STYLES
+/********************/
+body {
+	margin:0; padding:0;
+	overflow-x:hidden;
+	background:white!important;
+}
+.font-mast {
+	font-family: Kameron, Georgia, Times New Roman;
+	font-weight:bold; line-height:normal;
+}
+.btn-main { padding:10px 20px; font-size:20px; font-weight:bold; color:#ffffff; text-decoration:none; -webkit-border-radius:5px;  -moz-border-radius:5px; border-radius:5px;  text-shadow:0px 1px 0px #000000; border:solid #e87601 1px; border-bottom:solid 6px #904800; background:#cf6901; display:inline-block; /* IE is so silly */ font-family:Kameron,Georgia,Times New Roman; margin-top:10px; text-transform:uppercase; cursor:pointer; }
+.btn-main:hover { background:#e69e03; border-bottom:solid 6px #ab5500; }
+
+.padding-mast { padding:@padding; }
+.padding-top { padding-top:@padding; }
+.padding-col-right { padding-right:@padding; }
+.padding-col-left { padding:0 @padding; }
+.marg-bot { margin-bottom:@padding; }
+a, * { outline:none!important; }
+
+.clear { clear:both; }
+
+.reset { border-bottom:0; height:auto; line-height:normal; }
+
+.border-bot {
+	border-bottom:solid 1px #CCCCCC;
+	padding-bottom:10px; margin-bottom:10px;	
+}
+
+.lrg { font-size:18px; }
+
+/********************
+/ NEW GLOBALS
+/********************/
+.mod-5 {
+	.tab-content h2 {
+		line-height:21px;
+		margin:0 0 5px 0; padding:0;
+	}
+}
+.holder-header-page-jackpot {
+	position:relative;
+	height:276px; width:100%;
+	
+	.line-1 { 
+		position:absolute;
+		left:118px; top:76px;
+		width:400px; left:10px;
+		.font-mast;
+		text-transform:uppercase; color:white; font-size:19px; text-align:center;
+	}
+	.line-jackpot {
+		position:absolute;
+		top:87px; left:10px;
+		width:400px; height:70px;
+		text-align:center;
+		.font-mast;
+		font-size:58px; color:white;
+	}
+	.line-updated {
+		position:absolute;
+		top:150px; left:10px;
+		width:400px;
+		text-align:center;
+		font-size:12px; color:white;
+	}
+	.next-draw {
+		position:absolute;
+		width:203px; text-align:center;
+		left:442px; top:132px;
+		.font-mast; color:#ce5c00; font-size:19px;
+	}
+	.btn-play {
+		position:absolute;
+		width:190px; height:41px;
+		left:115px; top:180px;
+	}
+	
+	/** COUNTDOWN STYLES **/
+	.holder-countdown {
+		position:absolute;
+		top:64px; right:46px;
+		width:203px; height:49px;
+		
+		.position {
+			font-size:49px; font-family:'Arial Narrow', sans-serif; font-weight:bold;
+		}
+		span { line-height:normal; text-align:center; }
+		.count-hours, .count-minutes {
+			position:absolute; display:block;
+			width:53px; height:49px;
+			letter-spacing:-3px;
+		}
+		.count-hours {
+			left:65px; top:0;
+		}
+		.count-minutes {
+			left:135px; top:0;
+		}
+		.count-days {
+			position:absolute;
+			width:35px; text-align:center;
+			left:10px;
+		}
+	}
+	.draw-details {
+		position:absolute;
+		left:450px; top:155px;
+		width:190px;
+		font-size:12px;
+	}
+		
+}
+.table-3 {
+	border-top:solid 3px #b9b9b9; 
+	td, th { border-right:none!important;} 
+	td:last-child { text-align:center!important; }
+	th {
+		background:#fffceb;
+		border-bottom:solid 1px #b9b9b9; border-left:0!important;
+		color:black; font-weight:bold;
+		padding:5px;
+		height:auto; overflow:visible;
+		font-size:11px;
+	}
+	td {
+		border-bottom:solid 1px #b9b9b9;
+		text-align:inherit;
+	}
+	tr.even {
+		background:#eaeaea;
+	}
+}
+
+
+
+/***********************/
+/*  JACKPOT GAMES TABS
+/***********************/
+.holder-tabs { 
+	border:solid 1px #b2b2b2;
+	
+	ul.tabs-new { 
+		height:40px;
+		margin:0; padding:0;
+		background:#e5e5e5;
+		list-style:none; 
+		border-bottom:solid 1px #b2b2b2;
+		
+		li { 
+			line-height:normal; text-transform:capitalize;
+			
+			h2 {
+				font-size:14px;
+				margin:0!important; padding:0!important;
+				text-transform:none; font-weight:normal; font-family:Arial, Helvetica, sans-serif; line-height:normal!important;
+			}
+			
+			a {
+				border-right:solid 1px #b2b2b2; border-bottom:solid 1px #b2b2b2; float:left; margin:0; padding:0; height:20px; display:block; padding:10px;					
+			}
+			.selected { border-bottom:solid 1px white!important; background:white; color:black; font-weight:bold; }
+		}
+	}
+	/* end nav */
+	
+	.tab-content {
+		h2.head {
+			padding-bottom:10px; margin-bottom:10px;
+			border-bottom:solid 1px #CCCCCC;
+		}
+		h3.table-head {
+				color:black; font-weight:bold; font-family:Verdana, Geneva, sans-serif!important; font-size:14px; }
+		.col-nums-left {
+			float:left;
+			width:55%;
+		}
+		.col-nums-right {
+			float:left;
+			width:45%;	
+		}
+		.col-half {
+			float:left;
+			width:50%;
+		}
+		.col-card {
+			float:left;
+			margin-right:35px;
+			width:364px;
+		}
+		.col-steps {
+			width:248px;
+			float:left;	
+		}
+	}
+	
+	/** balls start **/
+	ul.balls {
+		
+		margin:0; padding:0;
+		list-style:none;
+			
+		li {
+			position:relative; display:block;
+			float:left;
+			width:43px; height:48px;
+			margin-right:5px;
+			background:url(../images/SPRITE_BALLS.png) left top no-repeat;
+			color:black; font-size:24px;
+			font-weight:bold; font-family:Verdana, Geneva, sans-serif;
+			
+			span {
+				position:absolute;
+				left:0; top:13px; right:0;
+				text-align:center;
+			}
+		}
+			
+	}
+	/** balls end **/
+
+	.estimated-amount { 
+		font-size:14px; color:#379d00; font-weight:bold;
+		margin:10px 0; 
+	}
+	
+	#tabs-numbers {
+		.col-nums-right .table-3 { font-size:11px; }	
+	}
+	
+	
+}
+
+/***********************/
+/*  HOW TO PLAY STYLES
+/***********************/
+.col-card { float:left; position:relative; }
+.col-card .ico-help-l, .col-card .ico-help-r { display:block; width:38px; height:34px; position:absolute; cursor:pointer; }
+.col-card .ico-help-b, .col-card .ico-help-t { display:block; width:31px; height:41px; position:absolute; cursor:pointer; }
+.col-card .ico-help-l { background:url(../images/sprite_tip1.png) -624px top no-repeat; }
+.col-card .ico-help-r { background:url(../images/sprite_tip1.png) -586px top no-repeat; }
+.col-card .ico-help-b { background:url(../images/sprite_tip1.png) -662px top no-repeat; }
+.col-card .ico-help-t { background:url(../images/sprite_tip1.png) -693px top no-repeat; }
+.col-card .tip-help a.tip-close { display:block; position:absolute; top:8px; right:5px; width:54px; height:19px; background:url(../images/btn_close.png) left top no-repeat; }
+.col-card .tip-help .tip { position:absolute; width:293px; display:none; z-index:500; }
+.col-card .tip-help .tip .top { height:17px; background:url(../images/sprite_tip1.png) left top no-repeat; }
+.col-card .tip-help .tip .content { padding:5px; background:url(../images/sprite_tip1.png) -293px top repeat-y; color:white; }
+.col-card .tip-help .tip .bottom { height:28px; background:url(../images/sprite_tip1.png) left -17px no-repeat; }
+.col-card .tip-help .box { position:absolute;  -moz-border-radius:2px; -webkit-border-radius:2px; -khtml-border-radius:2px; border-radius:2px; border:solid 3px #00CCFF; display:none; z-index:400; }
+
+
+
+/********************
+/ POWERBALL
+/********************/
+.holder-header-page-jackpot.powerball {
+	background:url(../images/header_hero_powerball_v2.jpg) center top no-repeat;	
+}
+.page-powerball {
+	strong.bon { color:red!important; }
+	ul.balls li.bon { background:url(../images/SPRITE_BALLS.png) -44px top no-repeat!important; color:white!important; }
+}
+
+/* CARD */
+.card-powerball {
+	
+	.nums {
+		.ico-help { left:-15px; top:193px; }
+		.tip { left:43px; bottom:713px; }
+		.box { width:325px; height:78px; left:18px; top:158px; }
+	}
+	
+	.powerball {
+		.ico-help { left:-15px; top:259px; }
+		.tip { left:38px; bottom:636px; }
+		.box { width:325px; height:55px; right:15px; top:237px; }
+	}
+	
+	.power-play {
+		.ico-help { left:333px; top:89px; }
+		.tip { right:-65px; bottom:780px; }
+		.box { width:140px; height:42px; right:16px; top:93px; }
+	}
+	
+	.draws {
+		.ico-help { left:346px; top:133px; }
+		.tip { right:32px; bottom:735px; }
+		.box { width:331px; height:17px; right:12px; top:138px; }
+	}
+}
+/* tables */
+table.tablePowerball td, table.tablePowerball th { border-right:solid 1px #feccce!important; border-bottom:solid 1px #ff9698; }
+table.tablePowerball td:last-child, table.tablePowerball th:last-child { border-right:none!important; }
+table.tablePowerball .caption { background:#a31216; border-bottom:none; } 
+table.tablePowerball th { color:white; background:#bf171c; border-right:solid 1px #a31216!important; }
+table.tablePowerball tr:nth-child(even) { background:#ffebec; }
+
+
+
+/********************
+/ LOTTO
+/********************/
+.holder-header-page-jackpot.lotto {
+	background:url(../images/header_hero_lotto_v2.jpg) center top no-repeat;	
+}
+.page-lotto {
+	strong.bon { color:#cf6901!important; }
+	ul.balls li.bon { background:url(../images/SPRITE_BALLS.png) -87px top no-repeat!important; color:white!important; }
+}
+
+/* CARD */
+.card-lotto {
+	
+	.nums {
+		.ico-help { left:-18px; top:219px; }
+		.tip { left:-50px; bottom:675px; }
+		.box { width:158px; height:115px; left:13px; top:199px; }
+	}
+	
+	.extra {
+		.ico-help { left:232px; top:57px; }
+		.tip { left:135px; bottom:796px; }
+		.box { width:149px; height:65px; right:12px; top:85px; }
+	}
+	
+	.draws {
+		.ico-help { left:335px; top:161px; }
+		.tip { right:17px; bottom:712px; }
+		.box { width:252px; height:34px; right:25px; top:158px; }
+	}
+}
+
+
+/********************
+/ LUCKY DAY LOTTO
+/********************/
+.holder-header-page-jackpot.ldl {
+	background:url(../images/header_hero_ldl_v2.jpg) center top no-repeat;
+	.line-1, .line-jackpot, .line-updated { color:#1079bf; }
+}
+.page-ldl {
+	strong.bon { color:#1079bf!important; }
+	ul.balls li.bon { background:url(../images/SPRITE_BALLS.png) -44px top no-repeat!important; color:white!important; }
+}
+
+/* CARD */
+.card-ldl {
+	
+	.nums {
+		.ico-help { left:15px; top:91px; }
+		.tip { left:-41px; bottom:783px; }
+		.box { width:108px; height:125px; left:48px; top:88px; }
+	}
+	
+	.extra {
+		.ico-help { left:20px; top:192px; }
+		.tip { left:-87px; bottom:716px; }
+		.box { width:14px; height:53px; right:295px; top:159px; }
+	}
+		
+	.draws {
+		.ico-help { left:-2px; top:304px; }
+		.tip { right:176px; bottom:590px; }
+		.box { width:17px; height:338px; right:312px; top:279px; }
+	}
+}
+
+/* TABLES */
+table.tableLDL td, table.tableLDL th { border-right:solid 1px #c9e6f6!important; border-bottom:solid 1px #c9e6f6; }
+table.tableLDL td:last-child, table.tableLDL th:last-child { border-right:none!important; }
+table.tableLDL .caption { background:#00a4e4; } 
+table.tableLDL th { color:#00a4e4; background:#c9e6f6; border-right:solid 1px #6ac7ee!important; }
+table.tableLDL tr:nth-child(even) { background:#eef7fc; }
+
+
+
+/***********************/
+/*  MEGAMILLIONS
+/***********************/
+.holder-header-page-jackpot.megamillions {
+	background:url(../images/header_hero_megamillions_v2.jpg) center top no-repeat;
+	.line-1, .line-jackpot, .line-updated { color:white; }
+}
+.page-megamillions {
+	strong.bon { color:#123c78!important; }
+	ul.balls li.bon { background:url(../images/SPRITE_BALLS.png) -131px top no-repeat!important; color:white!important; }
+}
+/* CARD MEGA MILLIONS */
+.card-megamillions {
+	
+	.nums {
+		.ico-help { left: -16px; top:234px; }
+		.tip { left:43px; bottom:671px; }
+		.box { width:320px; height:78px; left:20px; top:203px; }
+	}
+	
+	.megaball {
+		.ico-help { left: -15px; top:293px; }
+		.tip { left:17px; bottom:593px; }
+		.box { width:289px; height:31px; right:53px; top:283px; }
+	}
+		
+	.megaplier {
+		.ico-help { left:149px; top:120px; }
+		.tip { right:-54px; bottom:764px; }
+		.box { width:159px; height:48px; right:17px; top:108px; }
+	}
+	
+	.draws {
+		.ico-help { left:29px; top:168px; }
+		.tip { right:32px; bottom:702px; }
+		.box { width:227px; height:23px; right:68px; top:170px; }
+	}
+}
+
+.megamillions #jackpot-amt {
+	position:absolute;
+	left:307px; top:68px;
+	height:59px; width:375px;
+	font-size:59px; font-weight:bold; letter-spacing:-4px; line-height:normal; text-align:center;
+}
+.megamillions .jackpot-next-draw {
+	position:absolute;
+	left:307px; top:140px;
+	height:59px; width:375px;
+	font-size:24px; text-align:center;
+}
+.megamillions .jackpot-label {
+	position:absolute;
+	left:307px; top:50px;
+	height:59px; width:375px;
+	font-size:24px; text-align:center;
+}
+.megamillions .btnMain {
+	left:411px!important; top:165px!important;
+	display:block;	
+}
+
+
+/* tables */
+table.tableMega td, table.tableMega th { border-right:solid 1px #96aad1!important; border-bottom:solid 1px #96aad1; }
+table.tableMega td:last-child, table.tableMega th:last-child { border-right:none!important; }
+table.tableMega .caption { background:#08254e; border-bottom:none; } 
+table.tableMega th { color:white; background:#05306b; border-right:solid 1px #08254e!important; }
+table.tableMega tr:nth-child(even) { background:#d9e6ff; }
+
